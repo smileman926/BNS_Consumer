@@ -1,0 +1,123 @@
+@import "./../../style/variables.scss";
+
+.purchase-history {
+  .pagination {
+    // margin-left: auto;
+  }
+  .bns-dropdown {
+    max-width: 150px;
+  }
+  &-list {
+    margin-bottom: 100px;
+    &-header {
+      text-transform: uppercase;
+      font-weight: 600;
+      flex-wrap: wrap;
+      background-color: $colorBg;
+      padding: 15px;
+      margin-bottom: 20px;
+      &.name {
+        background: none;
+        margin-bottom: 0;
+        color: rgb(167, 167, 167);
+      }
+    }
+    &-row {
+      height: 50px;
+      background-color: #767676;
+      margin: 10px 0;
+    }
+    &-item {
+      flex-grow: 1;
+      width: 20%;
+      text-align: center;
+      padding: 0 30px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      img {
+        height: 50px;
+        max-width: 50px;
+        object-fit: contain;
+      }
+      &:first-child {
+        text-align: left;
+      }
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+
+  .winned-items {
+    margin: 50px 0;
+    &-header {
+      font-weight: 600;
+    }
+    &-row {
+      height: 95px;
+      background-color: #767676;
+      margin: 10px 0;
+    }
+    &-item {
+      max-height: 100%;
+      position: relative;
+      img {
+        max-height: 100%;
+      }
+      flex-grow: 1;
+      text-align: center;
+      padding: 0 30px;
+      &:first-child {
+        text-align: left;
+      }
+      &:last-child {
+        text-align: right;
+      }
+      &.image-item {
+        height: 100%;
+        padding: 10px 30px;
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.page-item.disabled {
+  .page-link {
+    background: none !important;
+    border-color: #6c757d !important;
+  }
+}
+
+.purchase-loading-icon {
+  margin: auto;
+  display: block;
+  font-size: 56px;
+}
+
+@media (max-width: 425px) {
+  .purchase-history {
+    &-list {
+      margin-bottom: 20px;
+      &-header {
+        padding: 0;
+        font-size: 14px;
+      }
+      &-row {
+      }
+      &-item {
+        padding: 5px;
+        text-overflow: initial;
+        white-space: initial;
+        overflow: initial;
+      }
+    }
+
+    .btn-bns {
+      padding: 15px;
+    }
+  }
+}

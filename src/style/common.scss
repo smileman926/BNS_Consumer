@@ -1,0 +1,45 @@
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+@import './variables.scss';
+a {
+  color: #fff;
+  &:hover {
+    color: #fff;
+  }
+}
+.color-red {
+  color: #9d3d48;
+}
+.color-green {
+  color: #00f404;
+}
+.color-dark-grey {
+  color: $colorDarkGrey;
+}
+
+.flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-around-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #00f344;
+}
+
+.box {
+  background-color: $colorBoxBg;
+  border-radius: 10px;
+  box-shadow: 0 0 50px 0 rgb(36, 36, 36);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

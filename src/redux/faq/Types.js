@@ -1,0 +1,3 @@
+export const GET_FAQ_REQUEST = "GET_FAQ_REQUEST";
+export const GET_FAQ_SUCCESS = "GET_FAQ_SUCCESS";
+export const GET_FAQ_ERROR = "GET_FAQ_ERROR";

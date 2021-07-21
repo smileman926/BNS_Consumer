@@ -1,0 +1,41 @@
+@import "./../../style/variables.scss";
+
+.balance {
+  width: 100%;
+  background-color: #00000055;
+  border-radius: 30px;
+  .line {
+    width: 1px;
+    height: 30px;
+    background-color: #ffffff55;
+  }
+}
+
+div.with-border {
+  border: 1px dashed $colorAccent;
+  //   max-width: 300px;
+  display: inline-flex !important;
+  margin: auto;
+  border-radius: 40px;
+  padding: 5px;
+}
+
+div.wrpTabBTN {
+  display: grid !important;
+  gap: 5px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  //   > div {
+  //     flex-shrink: 0;
+  //   }
+}
+
+@media (max-width: 425px) {
+  .balance {
+    // display: flex;
+    flex-direction: column;
+    .line {
+      display: none;
+    }
+  }
+}

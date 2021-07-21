@@ -1,0 +1,50 @@
+@import "./../../style/variables.scss";
+
+.products {
+  .loadmore-btn{
+    background: none;
+    color: #5C5C5C;
+    border: none;
+  }
+}
+
+.own-infinite {
+  overflow: hidden !important;
+}
+
+
+.select {
+  -webkit-appearance: none;
+  position: relative;
+  margin-bottom: 0 !important;
+
+  &.form-control {
+    padding: 7px 20px !important;
+    border-radius: 6px;
+  }
+
+  &_wrp {
+    display: inline-block;
+    width: calc(100% - 10px);
+    position: relative;
+    z-index: 20;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 45%;
+      right: 15px;
+      $w: 12px;
+      width: $w;
+      height: $w;
+      z-index: -1;
+      transform: translateY(-50%) rotateZ(135deg);
+      border-top: 2px solid $colorGrey;
+      border-right: 2px solid $colorGrey;
+    }
+
+    &:first-of-type {
+      margin-right: 10px;
+    }
+  }
+}

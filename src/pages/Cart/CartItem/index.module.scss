@@ -1,0 +1,60 @@
+@import "./../../../style/variables.scss";
+
+.row {
+  background-color: $colorBoxBg;
+  padding: 20px 30px;
+  margin-bottom: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 50px;
+  grid-template-areas: "name quantity price del";
+  align-items: center;
+}
+
+.name {
+  grid-area: name;
+}
+
+.del {
+  text-align: right;
+  grid-area: del;
+  &Btn {
+    color: $colorAccent;
+    border: none;
+    background: none;
+    &:disabled {
+      color: $colorGrey;
+      cursor: default;
+    }
+  }
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  grid-area: quantity;
+}
+.seat {
+  grid-area: quantity;
+}
+
+.price {
+  grid-area: price;
+}
+
+@media (max-width: 620px) {
+  .row {
+    padding: 10px 15px;
+    justify-items: baseline;
+    gap: 20px 0;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+      "name name"
+      "quantity quantity"
+      "price del";
+    :global {
+      .quantity--box {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

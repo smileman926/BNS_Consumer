@@ -1,0 +1,7 @@
+const myCommentsTypes = {
+  MYCOMMENTS_REQUEST: "MYCOMMENTS_REQUEST",
+  MYCOMMENTS_SUCCESS: "MYCOMMENTS_SUCCESS",
+  MYCOMMENTS_FAILED: "MYCOMMENTS_FIELD",
+};
+
+export default myCommentsTypes;

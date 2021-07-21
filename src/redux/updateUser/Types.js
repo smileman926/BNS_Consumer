@@ -1,0 +1,7 @@
+const updateUserTypes = {
+  UPDATE_USER_REQUEST: "UPDATE_USER_REQUEST",
+  UPDATE_USER_SUCCESS: "UPDATE_USER_SUCCESS",
+  UPDATE_USER_FAILED: "UPDATE_USER_FAILED",
+};
+
+export default updateUserTypes;

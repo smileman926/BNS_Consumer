@@ -1,0 +1,60 @@
+@import "../../../style/variables.scss";
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  border: 2px solid transparent;
+  border-radius: 100%;
+  background-color: $colorBg;
+  display: inline-block;
+  img {
+    filter: invert(1);
+    width: 80%;
+  }
+  &.get {
+    border-color: $colorAccent;
+    transform: rotate(90deg);
+  }
+  &.corrected {
+    border-color: yellow;
+    transform: rotate(0deg);
+  }
+  &.lose {
+    border-color: #f00;
+    transform: rotate(-90deg);
+  }
+}
+
+.trancaction {
+  font-size: 14px;
+  span {
+    color: lightgrey;
+    white-space: nowrap;
+    .id {
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+}
+
+.cost {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.9;
+  &.get {
+    color: $colorAccent;
+  }
+  &.lose {
+    color: #f00;
+  }
+}
+
+.date {
+  color: grey;
+  font-size: 12px;
+  margin-top: -10px;
+}
+
+.title {
+  line-height: 2;
+}

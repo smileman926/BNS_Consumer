@@ -1,0 +1,25 @@
+@import "../variables.scss";
+
+.bns-dropdown {
+  outline: transparent !important;
+  .dropdown-toggle {
+    background-color: transparent !important;
+    width: 100%;
+    min-height: 55px;
+    border-radius: 30px;
+    border-color: $colorGrey;
+    &:focus {
+      outline: transparent;
+      outline: none;
+      box-shadow: none;
+    }
+    &::after {
+      margin-right: 10px;
+      margin-top: 10px;
+      float:right;
+    }
+  }
+  .dropdown-menu  {
+    width: 100%;
+  }
+}

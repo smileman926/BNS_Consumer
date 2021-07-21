@@ -1,0 +1,67 @@
+@import "./../../style/variables.scss";
+
+.cc-wrapper {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-radius: 30px;
+    background: transparent;
+    border: 1px solid #b3b3b3;
+    color: #fff;
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .changeBtn {
+        background-color: transparent;
+        color: white;
+        border-bottom: 1px solid white;
+        padding: 0 3px;
+        cursor: pointer;
+    }
+
+    
+}
+.modal-content {
+    background-color: #6c6c6c !important;
+    border-radius: 20px !important;
+    padding: 10px !important;
+
+    .select {
+        -webkit-appearance: none;
+        position: relative;
+        margin-bottom: 0 !important;
+    
+        &_label {
+        display: block;
+        width: 100%;
+        padding-left: 20px;
+        }
+    
+        &_wrp {
+        display: inline-block;
+        width: calc(50% - 10px);
+        position: relative;
+        z-index: 20;
+    
+        &::after {
+            content: "";
+            position: absolute;
+            top: 45%;
+            right: 15px;
+            $w: 12px;
+            width: $w;
+            height: $w;
+            z-index: -1;
+            transform: translateY(-50%) rotateZ(135deg);
+            border-top: 2px solid $colorGrey;
+            border-right: 2px solid $colorGrey;
+        }
+    
+        &:first-of-type {
+            margin-right: 10px;
+        }
+        }
+    }
+}

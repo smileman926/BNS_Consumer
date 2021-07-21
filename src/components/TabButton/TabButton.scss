@@ -1,0 +1,39 @@
+@import "./../../style/variables.scss";
+
+.tab-button {
+  //   max-width: 200px;
+  padding: 1rem;
+  border: 1px solid $colorGrey;
+  background-color: $colorBg;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  &.selected {
+    color: $colorAccent;
+    border-color: $colorAccent;
+  }
+  &:hover {
+    color: $colorAccent;
+    border-color: $colorAccent;
+  }
+  img {
+    width: 30px;
+    filter: invert(1);
+  }
+}
+
+@media (max-width: 425px) {
+  .tab-button {
+    // width: auto;
+    // width: 50%;
+    // flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    img {
+      width: 20px;
+    }
+  }
+}

@@ -1,0 +1,187 @@
+@import "./../../style/variables.scss";
+
+.checkbox {
+  &__box {
+    padding: 5px 15px;
+    background-color: lighten($colorBg, 5%);
+    border-radius: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    margin: 0;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #d3d3d3;
+    font-family: $fontWorkSans;
+    font-size: 14px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    p {
+      margin: 0;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__input + &__label {
+    span {
+      $size: 25px;
+      display: block;
+      width: $size;
+      height: $size;
+      border-radius: $size;
+      border: 1px solid $colorGrey;
+      display: flex;
+      flex-shrink: 0;
+      svg {
+        margin: auto;
+        $size: 15px;
+        width: $size;
+        height: $size;
+        fill: lighten($colorBg, 5%);
+      }
+    }
+  }
+
+  &__input:checked + &__label {
+    span {
+      border-color: $colorGreen;
+      background-color: $colorGreen;
+    }
+  }
+}
+
+.list .checkbox__label {
+  &:nth-of-type(2n-1) {
+    border-top: 1px solid $colorBg;
+    border-bottom: 1px solid $colorBg;
+  }
+}
+
+.confirmPassword {
+  padding-left: 20px;
+  margin-top: -15px;
+  font-style: italic;
+  color: #dc3545;
+  font-weight: 400;
+}
+
+.headerSelect {
+  display: flex;
+  align-items: center;
+  > label {
+    flex-grow: 1;
+  }
+}
+
+.btnAll {
+  background: none;
+  $size: 25px;
+  display: block;
+  width: $size;
+  height: $size;
+  border-radius: $size;
+  border: 1px solid $colorGrey;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 5px;
+  svg {
+    margin: auto;
+    $size: 15px;
+    width: $size;
+    height: $size;
+    color: #fff;
+    // fill: #fff;
+    display: none;
+  }
+
+  &.select {
+    border-color: $colorGreen;
+    background-color: $colorGreen;
+    svg {
+      display: block;
+    }
+  }
+}
+
+div.pop {
+  max-width: 300px;
+  top: 10px !important;
+
+  &::after {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: 20px;
+
+      display: block;
+      border: 10px solid transparent;
+      border-bottom-color: #a9a9a9;
+  }
+}
+
+h3.pop_header {
+  background-color: #a9a9a9;
+  border-bottom: 1px solid #fff;
+  font-weight: 700;
+  font-family: $fontWorkSans;
+
+  color: #fff;
+}
+
+div.pop_body {
+  font-family: $fontWorkSans;
+  background-color: #a9a9a9;
+  color: #fff;
+}
+
+.pop {
+  &_title {
+    font-family: $fontWorkSans;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  
+  &_list {
+    list-style: none;
+    padding-left: 20px;
+    &_item {
+      font-family: $fontWorkSans;
+      padding-bottom: 0;
+      margin-bottom: 5px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -15px;
+        width: 5px;
+        height: 5px;
+        transform: translateY(-50%);
+        border-radius: 5px;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.hidePasswordIcon {
+    position: relative;
+    height: auto;
+    left: 92%;
+    top: 41px;
+    color: black;
+    cursor: pointer;
+  } 

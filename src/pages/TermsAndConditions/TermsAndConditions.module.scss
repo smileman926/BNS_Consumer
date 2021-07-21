@@ -1,0 +1,22 @@
+@import "../../style/variables.scss";
+
+.span {
+  white-space: pre-wrap;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 425px) {
+  :global {
+    .h2 {
+      font-size: 24px !important;
+    }
+    .subtitle {
+      font-size: 14px;
+    }
+  }
+}

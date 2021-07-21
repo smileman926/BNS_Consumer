@@ -1,0 +1,109 @@
+@import "./../../style/variables.scss";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  // flex-wrap: wrap;
+  .input {
+    background: $colorGrey;
+    border: none;
+    // display: block;
+    width: 100%;
+    background: none;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    border: 1px solid $colorGrey;
+    padding: 15px 15px !important;
+  };
+
+  button{
+    flex: 1;
+    background: none;
+    margin: 0;
+    width: initial;
+    color: #01f404;
+    border-radius: 30px;
+    border: 1px solid #01f404;
+    padding: 15px 20px !important;
+    &:disabled{
+      border: 1px solid #b9b9b9;
+      color: #b9b9b9;
+    }
+  }
+}
+.errSpan{
+  color: rgba(244, 1, 1, 0.97);
+  flex:  1 1 100%;
+  padding-left: 10px;
+};
+.span{
+  color: #01f404;
+  flex:  1 1 100%;
+  padding-left: 10px;
+};
+
+.dropdown {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  position: absolute;
+  background-color: $colorBg;
+  z-index: 20;
+  display: none;
+
+  &:hover {
+    display: block;
+  }
+}
+
+.openD{
+  display: block;
+}
+.cnt{
+  position: relative;
+  flex: 2;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.dropItem {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  p {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    background-color: darken($colorGrey, 25);
+  }
+
+  .addCard {
+    background: none;
+    border: none;
+  }
+}
+
+.icon {
+  color: #fff;
+}
+
+.messageItem {
+  margin: 0;
+  padding: 5px 10px;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    button {
+      width: 100%;
+    }
+  }
+  
+}

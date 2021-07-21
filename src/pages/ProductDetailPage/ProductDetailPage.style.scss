@@ -1,0 +1,143 @@
+@import "./../../style/variables.scss";
+
+.product-detail {
+  &-image {
+    width: 100%;
+    border: solid 2px #323232;
+  }
+  .comment-post {
+    margin-top: 80px;
+    position: relative;
+    .comment-editor {
+      border-bottom: solid 1px #2f2f2f;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.colorAccent {
+  color: $colorAccent;
+}
+
+.count-comments {
+  top: 5px;
+  right: 15px;
+  position: absolute;
+  color: $colorGrey;
+
+  &-relative {
+    color: $colorGrey;
+    padding-right: 15px;
+    position: relative;
+    margin-left: auto;
+  }
+}
+
+.quantity {
+  &--wrp {
+    display: flex;
+
+    margin-bottom: 20px;
+    .button_addToCart {
+      padding: 10px 25px;
+      background: none;
+      border: 2px solid $colorAccent;
+      border-radius: 30px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $colorAccent;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 10px;
+      }
+      &:hover {
+        $darkened: 15;
+        border-color: darken($colorAccent, $darkened);
+        color: darken($colorAccent, $darkened);
+      }
+    }
+  }
+
+  &--box {
+    display: flex;
+    align-items: stretch;
+
+    margin-right: 25px;
+    border: 2px solid $colorGrey;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: $colorBg;
+    font-size: 20px;
+
+    .button_change {
+      border: none;
+      background: none;
+      background-color: $colorDarkGrey;
+      padding: 0 15px;
+      font-size: 22px;
+    }
+  }
+
+  &__count {
+    width: 50px;
+    // display: block;
+    text-align: center;
+    align-self: center;
+  }
+}
+
+.postButtonStyle {
+  margin-top: 20px;
+  width: "200px";
+  height: "55px";
+}
+
+.space-keep {
+  white-space: pre-wrap;
+}
+
+@media (max-width: 630px) {
+  .count-comments {
+    position: initial;
+    text-align: right;
+  }
+}
+
+@media (max-width: 425px) {
+  .quantity {
+    &--wrp {
+      // flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &--box {
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+  }
+  .btnBuyWrp {
+    text-align: center;
+    button {
+      margin: auto;
+    }
+  }
+  div.comment-editor {
+    h3 {
+      text-align: center;
+      margin-bottom: 1rem !important;
+      // font-size: 20px;
+    }
+  }
+
+  // .count-comments {
+  //   position: initial;
+  //   text-align: right;
+  // }
+  .product-detail .comment-post {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,26 @@
+@import "./../../style/variables.scss";
+p.confirm {
+  font-family: $fontWorkSans;
+
+  span {
+    color: $colorAccent;
+  }
+}
+
+.resend {
+  text-transform: uppercase;
+  display: block;
+  margin: auto;
+  border: none;
+  background: none;
+  color: #fff;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.change {
+  font-weight: 700;
+  display: block;
+  // margin: auto;
+  text-align: center;
+}

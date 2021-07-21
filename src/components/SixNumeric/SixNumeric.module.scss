@@ -1,0 +1,21 @@
+.fourNumber {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  // gap: 0 20px;
+
+  .input {
+    background-color: #717171;
+    border: none;
+    box-shadow: 0 2px 1px 0 transparentize(#000000, 0.7);
+    font-size: 18px;
+    text-align: center;
+    flex-shrink: 0;
+    flex-basis: 60px;
+    margin: 5px;
+    max-width: 60px;
+  }
+}
